@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Forever - Our Long Distance Love❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --rose: #ff2e63;
+            --pink: #ff9a9e;
+            --gold: #ffd700;
+            --purple: #a855f7;
+            --dark: #1a0b2e;
+            --darker: #0f0518;
+            --peach: #ffb6c1;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: var(--darker);
+            color: white;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text y="20" font-size="20">💖</text></svg>'), auto;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--rose), var(--purple));
+            border-radius: 5px;
+        }
+
+        /* Starfield Background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .fheart {
+            position: absolute;
+            font-size: 20px;
+            animation: floatHeart 15s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes floatHeart {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Secret Message Easter Egg */
+        .secret-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 100;
+            opacity: 0.3;
+            transition: all 0.3s;
+        }
+
+        .secret-message:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .secret-popup {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            background: rgba(255, 46, 99, 0.95);
+            padding: 20px;
+            border-radius: 20px;
+            max-width: 300px;
+            transform: scale(0);
+            transition: transform 0.3s;
+            z-index: 100;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .secret-popup.show {
+            transform: scale(1);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            background: radial-gradient(ellipse at center, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+        }
+
+        .hero-badge {
+            background: linear-gradient(45deg, var(--rose), var(--purple));
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 30px rgba(255, 46, 99, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 6rem;
+            background: linear-gradient(to right, var(--pink), var(--gold), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 3s linear infinite;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 20px rgba(255, 154, 158, 0.5));
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .count-item {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            min-width: 120px;
+            transition: transform 0.3s;
+        }
+
+        .count-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 46, 99, 0.1);
+        }
+
+        .count-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+        }
+
+        .count-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .distance-badge {
+            background: linear-gradient(45deg, var(--purple), var(--rose));
+            padding: 15px 30px;
+            border-radius: 50px;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(255, 46, 99, 0.6); }
+        }
+
+        .scroll-btn {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--rose);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: transparent;
+            color: var(--rose);
+            margin-top: 2rem;
+        }
+
+        .scroll-btn:hover {
+            background: var(--rose);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 100px 20px;
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: var(--pink);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1.1rem;
+        }
+
+        /* Walking Couple */
+        .walker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            z-index: 10;
+            transition: top 0.5s ease;
+            filter: drop-shadow(0 0 20px rgba(255, 46, 99, 0.8));
+        }
+
+        .walker-emoji {
+            animation: walk 0.6s infinite alternate;
+            display: inline-block;
+        }
+
+        @keyframes walk {
+            0% { transform: rotate(-10deg) translateY(0); }
+            100% { transform: rotate(10deg) translateY(-10px); }
+        }
+
+        .walker-hearts {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            animation: heartPop 1s infinite;
+        }
+
+        @keyframes heartPop {
+            0%, 100% { opacity: 0; transform: translateX(-50%) scale(0); }
+            50% { opacity: 1; transform: translateX(-50%) scale(1); }
+        }
+
+        .timeline-path {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--rose), var(--purple), var(--gold));
+            border-radius: 2px;
+            box-shadow: 0 0 20px rgba(255, 46, 99, 0.5);
+        }
+
+        .milestone {
+            display: flex;
+            margin-bottom: 100px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+            position: relative;
+        }
+
+        .milestone.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .milestone:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .milestone-content {
+            width: 45%;
+            padding: 30px;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--rose), var(--purple));
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 20px rgba(255, 46, 99, 0.3);
+        }
+
+        .milestone h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .milestone p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Photo Frame - Polaroid Style */
+        .photo-wrapper {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 15px 15px 60px 15px;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            transform: rotate(-3deg);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .milestone:nth-child(even) .polaroid {
+            transform: rotate(3deg);
+        }
+
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 30px 60px rgba(255, 46, 99, 0.3);
+        }
+
+        .polaroid-img {
+            width: 350px;
+            height: 350px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .polaroid-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: block;
+        }
+
+        .polaroid-caption {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #333;
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.5rem;
+        }
+
+        .tape {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 100px;
+            height: 30px;
+            background: rgba(255, 46, 99, 0.6);
+            backdrop-filter: blur(5px);
+            border-radius: 5px;
+        }
+
+        .photo-error {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #666;
+            text-align: center;
+            display: none;
+            font-size: 0.9rem;
+            padding: 20px;
+        }
+
+        /* Hidden Love Note */
+        .love-note {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--rose);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .polaroid:hover .love-note {
+            opacity: 1;
+        }
+
+        .love-note:hover {
+            transform: scale(1.2);
+        }
+
+        .note-content {
+            position: absolute;
+            bottom: 50px;
+            right: 0;
+            background: white;
+            color: #333;
+            padding: 15px;
+            border-radius: 15px;
+            width: 220px;
+            font-size: 0.85rem;
+            font-family: 'Quicksand', sans-serif;
+            transform: scale(0);
+            transition: transform 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        .love-note:hover .note-content {
+            transform: scale(1);
+        }
+
+        /* Music Player Widget */
+        .music-widget {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            z-index: 100;
+            max-width: 300px;
+            transition: all 0.3s;
+        }
+
+        .music-widget:hover {
+            background: rgba(255,255,255,0.15);
+            transform: scale(1.02);
+        }
+
+        .music-title {
+            font-size: 0.8rem;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .music-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .play-btn {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, var(--rose), var(--purple));
+            border: none;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 46, 99, 0.5);
+        }
+
+        .music-info {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Audio visualizer bars */
+        .visualizer {
+            display: flex;
+            gap: 3px;
+            align-items: flex-end;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        .bar {
+            width: 4px;
+            background: linear-gradient(to top, var(--rose), var(--gold));
+            border-radius: 2px;
+            animation: equalize 1s ease-in-out infinite;
+        }
+
+        .bar:nth-child(1) { height: 20%; animation-delay: 0.1s; }
+        .bar:nth-child(2) { height: 60%; animation-delay: 0.2s; }
+        .bar:nth-child(3) { height: 40%; animation-delay: 0.3s; }
+        .bar:nth-child(4) { height: 80%; animation-delay: 0.4s; }
+
+        @keyframes equalize {
+            0%, 100% { transform: scaleY(0.5); }
+            50% { transform: scaleY(1); }
+        }
+
+        /* Promise Section */
+        .promise-section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+            background: radial-gradient(ellipse at center, rgba(255, 46, 99, 0.15) 0%, transparent 70%);
+        }
+
+        .promise-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 40px;
+            padding: 60px;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+        }
+
+        .promise-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 46, 99, 0.2), transparent 60%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .promise-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .promise-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .promise-card h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(to right, var(--pink), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .promise-text {
+            font-size: 1.2rem;
+            line-height: 2;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+
+        .promise-list {
+            text-align: left;
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .promise-list li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .promise-list li:before {
+            content: '💝';
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Valentine Proposal Section */
+        .valentine-section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+            background: radial-gradient(ellipse at center, rgba(255, 46, 99, 0.3) 0%, transparent 70%);
+        }
+
+        .valentine-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 46, 99, 0.5);
+            border-radius: 40px;
+            padding: 60px;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(255, 46, 99, 0.3);
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .valentine-card h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--pink), var(--gold), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 3s linear infinite;
+        }
+
+        .valentine-question {
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .valentine-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-yes {
+            background: linear-gradient(45deg, #00c853, #00e676);
+            border: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 200, 83, 0.4);
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .btn-yes:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 200, 83, 0.6);
+        }
+
+        .btn-no {
+            background: linear-gradient(45deg, #ff5252, #ff1744);
+            border: none;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255, 23, 68, 0.4);
+            font-family: 'Quicksand', sans-serif;
+            position: relative;
+        }
+
+        .btn-no:hover {
+            transform: scale(1.1);
+        }
+
+        .no-options {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .no-option-btn {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--rose);
+            padding: 15px 30px;
+            border-radius: 30px;
+            margin: 10px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .no-option-btn:hover {
+            background: var(--rose);
+            transform: scale(1.05);
+        }
+
+        .valentine-success {
+            display: none;
+            animation: celebration 1s ease;
+        }
+
+        @keyframes celebration {
+            0% { transform: scale(0) rotate(0deg); opacity: 0; }
+            50% { transform: scale(1.2) rotate(5deg); }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .success-hearts {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: heartFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .success-text {
+            font-size: 2.5rem;
+            font-family: 'Great Vibes', cursive;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .success-message {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            .countdown { gap: 1rem; }
+            .count-item { min-width: 100px; padding: 1rem; }
+            .count-number { font-size: 2rem; }
+            .milestone, .milestone:nth-child(odd) { flex-direction: column; }
+            .milestone-content, .photo-wrapper { width: 100%; }
+            .polaroid-img { width: 280px; height: 280px; }
+            .promise-card { padding: 30px; }
+            .promise-card h2 { font-size: 2.5rem; }
+            .music-widget { max-width: 250px; }
+            .valentine-card { padding: 40px 20px; }
+            .valentine-card h2 { font-size: 3rem; }
+            .valentine-question { font-size: 1.4rem; }
+            .btn-yes, .btn-no { padding: 15px 35px; font-size: 1.2rem; }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 95%;
+            max-height: 95%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .lightbox-close:hover {
+            transform: scale(1.2) rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="stars" id="stars"></div>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    
+    <!-- Easter Egg: Secret Message -->
+    <div class="secret-message" onclick="toggleSecret()">💌</div>
+    <div class="secret-popup" id="secretPopup">
+        Love U Meri Aditi❤️
+    </div>
+
+    <!-- Music Player Widget -->
+    <div class="music-widget">
+        <div class="music-title">🎵 Our Songs</div>
+        <div class="music-controls">
+            <button class="play-btn" onclick="toggleMusic()" id="playBtn">▶</button>
+            <div class="music-info">
+                <div id="songName">Click to play</div>
+                <small style="color: rgba(255,255,255,0.6)">Indian Romantic</small>
+            </div>
+            <div class="visualizer" id="visualizer" style="display: none;">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="audioPlayer" loop>
+        <source src="assets/WhatsApp Audio 2026-02-13 at 2.22.48 AM.mpeg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Full view" id="lightbox-img">
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-badge">✨ Our Journey Begins Kaju Kattli ✨</div>
+        <h1>To My Forever Love</h1>
+        <p class="hero-subtitle">8th December 2025 - The day my world changed forever 💫</p>
+        
+        <div class="countdown">
+            <div class="count-item">
+                <span class="count-number" id="daysCount">0</span>
+                <span class="count-label">Days</span>
+            </div>
+            <div class="count-item">
+                <span class="count-number" id="hoursCount">0</span>
+                <span class="count-label">Hours</span>
+            </div>
+            <div class="count-item">
+                <span class="count-number" id="minutesCount">0</span>
+                <span class="count-label">Minutes</span>
+            </div>
+            <div class="count-item">
+                <span class="count-number">∞</span>
+                <span class="count-label">Love</span>
+            </div>
+        </div>
+
+        <div class="distance-badge">
+            <span>📍</span>
+            <span>Miles Apart, Heart to Heart</span>
+            <span>❤️</span>
+        </div>
+
+        <div class="scroll-btn" onclick="scrollToTimeline()">↓</div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section" id="timelineSection">
+        <div class="section-header">
+            <h2>Our Beautiful Journey</h2>
+            <p>From that first date to forever... every moment with you is precious</p>
+        </div>
+
+        <div class="timeline-container" id="timelineContainer">
+            <div class="timeline-path" id="timelinePath"></div>
+            <div class="walker" id="walker">
+                <div class="walker-hearts">💕</div>
+                <span class="walker-emoji">👫</span>
+            </div>
+
+            <!-- December 8, 2025 - The Beginning -->
+            <div class="milestone" data-progress="0">
+                <div class="milestone-content">
+                    <div class="date-badge">8th December 2025</div>
+                    <h3>The Beginning 💫</h3>
+                    <p>The day we officially started dating. Who knew that a simple talk would become the most beautiful chapter of my life? From that moment, every day has been a new reason to smile, to hope, to dream about our future together.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/photo1.jpeg')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/photo1.jpeg" alt="Our First Date" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/photo1.jpeg</small></div>
+                        </div>
+                        <div class="polaroid-caption">Where our story began...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">I still get butterflies thinking about that day! You looked absolutely stunning! 😍</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Call - Sleeping Beauty -->
+            <div class="milestone" data-progress="12">
+                <div class="milestone-content">
+                    <div class="date-badge">Every Night</div>
+                    <h3>Watching You Sleep 😴💕</h3>
+                    <p>Even when you're miles away, I never leave your side. Those video calls where you fall asleep while I'm still there, watching over you, protecting you in my own way. Your peaceful face is the last thing I see before I sleep and my favorite sight in the world.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/2.jpeg')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/2.jpeg" alt="Sleeping Beauty" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/2.jpeg</small></div>
+                        </div>
+                        <div class="polaroid-caption">My sleeping beauty...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">I could watch you sleep for hours. You look like an angel! 👼❤️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Virtual Shopping -->
+            <div class="milestone" data-progress="24">
+                <div class="milestone-content">
+                    <div class="date-badge">Shopping Dates</div>
+                    <h3>Our Virtual Shopping Spree 🛍️</h3>
+                    <p>Who says distance means we can't shop together? I love when you show me everything you bought, your eyes sparkling with excitement. From clothes to accessories, being part of your choices makes me feel close to you. Every "Do you like this?" melts my heart.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/3.jpeg')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/3.jpeg" alt="Shopping Together" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/3.jpeg</small></div>
+                        </div>
+                        <div class="polaroid-caption">Shopping with my love...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">I love how excited you get! Everything looks beautiful on you! 🛍️✨</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Outfits -->
+            <div class="milestone" data-progress="36">
+                <div class="milestone-content">
+                    <div class="date-badge">Every Morning</div>
+                    <h3>Your Daily Fashion Show 👗</h3>
+                    <p>Every day starts with your outfit pictures, and honestly, it's the highlight of my mornings. From casual looks to traditional wear, you carry everything with such grace. I feel so special that you want my opinion, that you check your outfit with me. It's our little ritual of love.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/4.jpeg')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/4.jpeg" alt="Daily Outfit" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/4.jpeg</small></div>
+                        </div>
+                        <div class="polaroid-caption">Stunning as always...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">You make every outfit look like it's made just for you! 🔥</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Black Saree -->
+            <div class="milestone" data-progress="48">
+                <div class="milestone-content">
+                    <div class="date-badge">That Special Day</div>
+                    <h3>The Black Saree 🔥</h3>
+                    <p>Remember that black saree? I literally lost my breath! You looked absolutely gorgeous, hot, and sexy - a vision in black that I'll never forget. That image is permanently etched in my heart. You don't just wear clothes, you own them, and that day you owned my heart all over again.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/5.jpeg')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/5.jpeg" alt="Black Saree" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/5.jpeg</small></div>
+                        </div>
+                        <div class="polaroid-caption">Absolutely breathtaking...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">I can't even describe how beautiful you looked! My heart stopped! 😍🔥</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gifts - Soft Toys & Earrings -->
+            <div class="milestone" data-progress="60">
+                <div class="milestone-content">
+                    <div class="date-badge">Surprise Gifts</div>
+                    <h3>My Gifts, Your Smile 🧸💎</h3>
+                    <p>Sending you soft toys and those special earrings was my way of hugging you from miles away. Every time you cuddle that teddy, remember I'm there. And those earrings... seeing you wear them made my heart burst with joy. Small tokens of my immense love for you.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/6.gif')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/6.gif" alt="Gifts" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/6.jpeg (Note: 6 is MP4 video)</small></div>
+                        </div>
+                        <div class="polaroid-caption">Sent with love...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">I wish I could gift you the world, but for now, these will have to do! 🎁❤️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saraswati Puja -->
+            <div class="milestone" data-progress="72">
+                <div class="milestone-content">
+                    <div class="date-badge">Saraswati Puja 🙏</div>
+                    <h3>"Yeh Jo Kaan Mein Hai Bali..." 🎵</h3>
+                    <p>That day was magical! You wore my earrings for Saraswati Puja and posted that story with "Yeh jo kaan mein hai bali, bss teri khatir dali" - I can't tell you how many times I watched it on loop. You looked like a goddess, and knowing you chose to wear my gift for such a special occasion meant everything to me.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/7.jpeg')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/7.jpeg" alt="Saraswati Puja" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/7.jpeg</small></div>
+                        </div>
+                        <div class="polaroid-caption">My divine beauty...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">That song, those earrings, your smile - PERFECT! 🎵❤️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Always There -->
+            <div class="milestone" data-progress="84">
+                <div class="milestone-content">
+                    <div class="date-badge">Always & Forever</div>
+                    <h3>In Good Times & Bad 🤝</h3>
+                    <p>I want you to know - I'm not just here for the laughs and good days. When you're sad, when work stresses you out, when you feel low - I'm there in every call, every text, every silent moment when you just need someone to listen. Your tough times are mine too, and we'll face them together, even from a distance.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/8.jpeg')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/8.jpeg" alt="Always There" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/8.jpeg</small></div>
+                        </div>
+                        <div class="polaroid-caption">Always by your side...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">Lean on me when you're tired. I'm your safe place! 🤗</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Distance Means Nothing -->
+            <div class="milestone" data-progress="95">
+                <div class="milestone-content">
+                    <div class="date-badge">Our Promise</div>
+                    <h3>Distance is Just a Test 💪</h3>
+                    <p>Yes, we're in a long-distance relationship. Yes, I can't hold your hand right now or wipe your tears in person. But never doubt that I'm giving my everything to make you happy, to make you smile, to make you feel loved every single day. Every call, every message, every virtual date - it's all my love traveling across miles to reach you.</p>
+                </div>
+                <div class="photo-wrapper">
+                    <div class="polaroid" onclick="openLightbox('assets/9.jpeg')">
+                        <div class="tape"></div>
+                        <div class="polaroid-img">
+                            <img src="assets/9.jpeg" alt="Together Forever" onerror="handleImageError(this)">
+                            <div class="photo-error">📸 Image not found<br><small>Check: assets/9.jpeg</small></div>
+                        </div>
+                        <div class="polaroid-caption">Love knows no distance...</div>
+                        <div class="love-note" onclick="event.stopPropagation()">💕
+                            <div class="note-content">I'd cross oceans for you, but for now, I'll cross the digital space! 🌊❤️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promise Section -->
+    <section class="promise-section">
+        <div class="promise-card">
+            <div class="promise-content">
+                <div class="promise-icon">💍</div>
+                <h2>My Promise to You</h2>
+                <p class="promise-text">
+                    Through video calls and text messages, through shopping dates and sleeping together virtually, through every outfit check and every festival celebration - my love for you grows stronger every day.
+                </p>
+                <ul class="promise-list">
+                    <li>I promise to be there in your bad times just like I am in your good times</li>
+                    <li>I promise to make you smile even when I'm not physically present</li>
+                    <li>I promise to cherish every photo, every call, every moment we share</li>
+                    <li>I promise that this distance is temporary, but my love is permanent</li>
+                    <li>I promise to keep clicking your photos (virtually) and falling for you every day</li>
+                </ul>
+                <p class="promise-text" style="font-size: 1.4rem; color: var(--gold); margin-top: 30px;">
+                    <strong>This long distance is just a chapter in our forever story. 📖❤️</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valentine Proposal Section -->
+    <section class="valentine-section" id="valentineSection">
+        <div class="valentine-card" id="valentineCard">
+            <div class="valentine-content" id="valentineContent">
+                <div class="promise-icon">💝</div>
+                <h2>Will You Be My Valentine?</h2>
+                <p class="valentine-question">Baby, will you be my Valentine? 💕</p>
+                <div class="valentine-buttons">
+                    <button class="btn-yes" onclick="sayYes()">YES! 💚</button>
+                    <button class="btn-no" onclick="sayNo()" id="noBtn">No 😢</button>
+                </div>
+                <div class="no-options" id="noOptions">
+                    <p style="color: var(--pink); margin-bottom: 15px; font-size: 1.2rem;">Are you sure? Think again... 🤔</p>
+                    <button class="no-option-btn" onclick="showOption('Maybe')">Maybe? 🤷‍♀️</button>
+                    <button class="no-option-btn" onclick="showOption('Next Year')">Next Year? 📅</button>
+                    <button class="no-option-btn" onclick="showOption('Friendzone')">Just Friends? 👫</button>
+                    <button class="no-option-btn" onclick="showOption('Puppy')">Puppy Eyes 🥺</button>
+                </div>
+            </div>
+            <div class="valentine-success" id="valentineSuccess">
+                <div class="success-hearts">💚💚💚</div>
+                <div class="success-text">She Said YES!</div>
+                <p class="success-message">
+                    You just made me the happiest person alive! 🎉<br>
+                    This Valentine's Day and every day after,<br>
+                    I promise to love you more than yesterday<br>
+                    and less than tomorrow. 💕<br><br>
+                    <strong>Forever Yours Aditi, Always ❤️</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Create Stars
+        function createStars() {
+            const container = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 3 + 's';
+                container.appendChild(star);
+            }
+        }
+
+        // Create Floating Hearts
+        function createFloatingHearts() {
+            const container = document.getElementById('floatingHearts');
+            const hearts = ['💕', '💖', '💗', '💓', '💝', '💘', '💞'];
+            
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.className = 'fheart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                container.appendChild(heart);
+                setTimeout(() => heart.remove(), 20000);
+            }, 800);
+        }
+
+        // Calculate Days Since 8th Dec 2025
+        function calculateTime() {
+            const startDate = new Date('2025-12-08T00:00:00');
+            const now = new Date();
+            
+            // If the date is in the future, show countdown to it
+            if (now < startDate) {
+                const diff = startDate - now;
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                
+                document.getElementById('daysCount').textContent = days;
+                document.getElementById('hoursCount').textContent = hours;
+                document.getElementById('minutesCount').textContent = minutes;
+            } else {
+                // Calculate time since the date
+                const diff = now - startDate;
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                
+                document.getElementById('daysCount').textContent = days;
+                document.getElementById('hoursCount').textContent = hours;
+                document.getElementById('minutesCount').textContent = minutes;
+            }
+        }
+
+        // Update every minute
+        setInterval(calculateTime, 60000);
+        calculateTime();
+
+        // Secret Message Toggle
+        function toggleSecret() {
+            document.getElementById('secretPopup').classList.toggle('show');
+        }
+
+        // Image Handling
+        function handleImageError(img) {
+            img.style.display = 'none';
+            img.nextElementSibling.style.display = 'block';
+        }
+
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Scroll to Timeline
+        function scrollToTimeline() {
+            document.getElementById('timelineSection').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Walking Couple Animation
+        const walker = document.getElementById('walker');
+        const timelinePath = document.getElementById('timelinePath');
+        const timelineContainer = document.getElementById('timelineContainer');
+
+        function updateWalker() {
+            const rect = timelineContainer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (rect.top < windowHeight && rect.bottom > 0) {
+                const total = rect.height;
+                const scrolled = windowHeight - rect.top;
+                const progress = Math.max(0, Math.min(100, (scrolled / (total + windowHeight)) * 100));
+                
+                walker.style.top = progress + '%';
+                timelinePath.style.height = progress + '%';
+                
+                // Change emoji based on progress
+                const emojis = ['👫', '💑', '📱', '🛍️', '👗', '🔥', '🧸', '🙏', '🤝', '💪', '💍'];
+                const idx = Math.floor((progress / 100) * (emojis.length - 1));
+                document.querySelector('.walker-emoji').textContent = emojis[idx];
+            }
+        }
+
+        window.addEventListener('scroll', updateWalker);
+        window.addEventListener('resize', updateWalker);
+
+        // Milestone Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.milestone').forEach(m => observer.observe(m));
+
+        // Music Player with Audio
+        let isPlaying = false;
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const visualizer = document.getElementById('visualizer');
+        const songName = document.getElementById('songName');
+
+        function toggleMusic() {
+            isPlaying = !isPlaying;
+            
+            if (isPlaying) {
+                audioPlayer.play().then(() => {
+                    playBtn.textContent = '⏸';
+                    visualizer.style.display = 'flex';
+                    songName.textContent = '🎵 Playing Now';
+                }).catch(err => {
+                    console.log('Audio play failed:', err);
+                    songName.textContent = 'Click to play';
+                    isPlaying = false;
+                });
+            } else {
+                audioPlayer.pause();
+                playBtn.textContent = '▶';
+                visualizer.style.display = 'none';
+                songName.textContent = 'Click to play';
+            }
+        }
+
+        // Valentine Functions
+        let noClickCount = 0;
+        const noMessages = [
+            "Are you sure? 🥺",
+            "Think again baby... 💕",
+            "Please say yes! 🙏",
+            "I'll be so sad... 😢",
+            "Last chance! 💝",
+            "You know you want to! 😉",
+            "Don't break my heart! 💔",
+            "Pretty please? 🥺👉👈"
+        ];
+
+        function sayYes() {
+            document.getElementById('valentineContent').style.display = 'none';
+            document.getElementById('valentineSuccess').style.display = 'block';
+            
+            // Create celebration effect
+            createCelebrationHearts();
+            
+            // Auto-play music if not already playing
+            if (!isPlaying) {
+                toggleMusic();
+            }
+        }
+
+        function sayNo() {
+            noClickCount++;
+            const noBtn = document.getElementById('noBtn');
+            const noOptions = document.getElementById('noOptions');
+            
+            // Show options after first no
+            if (noClickCount === 1) {
+                noOptions.style.display = 'block';
+            }
+            
+            // Change no button text and make it smaller
+            if (noClickCount < noMessages.length) {
+                noBtn.textContent = noMessages[noClickCount];
+            } else {
+                noBtn.textContent = "Just say YES! 💚";
+            }
+            
+            // Make no button smaller and yes button bigger
+            const currentScale = 1 - (noClickCount * 0.1);
+            const yesBtn = document.querySelector('.btn-yes');
+            yesBtn.style.transform = `scale(${1 + (noClickCount * 0.1)})`;
+            noBtn.style.transform = `scale(${Math.max(0.5, currentScale)})`;
+            
+            // Move no button randomly after 3 clicks
+            if (noClickCount > 3) {
+                const randomX = (Math.random() - 0.5) * 200;
+                const randomY = (Math.random() - 0.5) * 100;
+                noBtn.style.transform += ` translate(${randomX}px, ${randomY}px)`;
+            }
+        }
+
+        function showOption(option) {
+            const responses = {
+                'Maybe': "Maybe means eventually YES! 😊",
+                'Next Year': "Why wait? Let's start now! 💕",
+                'Friendzone': "We're way past friends! 😘",
+                'Puppy': "🥺🥺🥺 Please say yes!"
+            };
+            
+            alert(responses[option] + "\n\nBut seriously... just click YES! 💚");
+        }
+
+        function createCelebrationHearts() {
+            const container = document.getElementById('valentineSection');
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.textContent = ['💚', '💖', '💕', '💗', '💝'][Math.floor(Math.random() * 5)];
+                    heart.style.position = 'absolute';
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.top = '100%';
+                    heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+                    heart.style.animation = `floatUp ${Math.random() * 3 + 2}s ease-out forwards`;
+                    heart.style.pointerEvents = 'none';
+                    container.appendChild(heart);
+                    
+                    setTimeout(() => heart.remove(), 5000);
+                }, i * 100);
+            }
+        }
+
+        // Add float up animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                to {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize
+        createStars();
+        createFloatingHearts();
+        updateWalker();
+
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+</body>
+</html>
